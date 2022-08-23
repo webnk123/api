@@ -88,7 +88,7 @@ async def fetch(client, item):
 
 async def main(messagelist):
 	token =os.environ['TOKEN']
-	header = {'Authorization': str(token)  }
+	header = {'Authorization': "Bearer " + str(token)  }
 	async with aiohttp.ClientSession(headers=header) as client:
 		result = await asyncio.gather(*[
 			asyncio.ensure_future(fetch(client, item))
