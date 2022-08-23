@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver --noreload 0.0.0.0:8000"
+    container_name: notifications
+    volumes:
+      - .:/notifications
+    ports:
+      - "8000:8000"

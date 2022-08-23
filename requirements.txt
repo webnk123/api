@@ -1,0 +1,9 @@
+backports.zoneinfo==0.2.1
+Django
+djangorestframework==3.13.1
+Markdown
+pytz==2022.2.1
+sqlparse==0.4.2
+django-apscheduler
+aiohttp
+aiohttp[speedups]
